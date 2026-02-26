@@ -26,7 +26,7 @@ $currentIpv6 = ((netsh int ipv6 show glob | Select-String "Default Hop Limit") -
 # 4. Display Menu
 Clear-Host
 Write-Host "=========================================" -ForegroundColor Cyan
-Write-Host "   TTL / Hop Limit Configuration Tool    " -ForegroundColor Cyan
+Write-Host "          Hotspot Speed Hack Tool        " -ForegroundColor Cyan
 Write-Host "=========================================" -ForegroundColor Cyan
 Write-Host "Current IPv4 TTL : $currentIpv4" -ForegroundColor Green
 Write-Host "Current IPv6 TTL : $currentIpv6" -ForegroundColor Green
@@ -77,5 +77,6 @@ if ([int]$currentIpv4 -eq $ttl -and [int]$currentIpv6 -eq $ttl) {
     
     Write-Host "Success! Settings updated." -ForegroundColor Green
 }
+
 
 Read-Host "`nPress Enter to exit"
